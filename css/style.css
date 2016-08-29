@@ -1,0 +1,254 @@
+@font-face{
+    font-family: Open Sans;
+    src:url(../fonts/OpenSans-Light.ttf);
+    font-weight:300
+}
+@font-face{
+    font-family: Open Sans;
+    src:url(../fonts/OpenSans-Regular.ttf);
+    font-weight:400
+}
+@font-face{
+    font-family: Open Sans;
+    src:url(../fonts/OpenSans-Bold.ttf);
+    font-weight:600
+}
+@font-face{
+    font-family: Open Sans;
+    src:url(../fonts/OpenSans-ExtraBold.ttf);
+    font-weight:800
+}
+
+
+* {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+.contackbook {
+    padding: 15px
+}
+.alignCenter {
+    text-align: center
+}
+body {
+    background-color: #fafafa
+}
+input[type=button] {
+    height: 35px;
+    border-radius: 1px;
+    padding: 0 14px;
+    background-color: #00838f;
+    color: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    margin: 3px 5px
+}
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button]:focus {
+    background-color: #fff;
+    border: 2px solid #00838f;
+    color: #00838f;
+}
+.update {
+    display: none
+}
+input.txedit {
+    display: none;
+    width: 100%;
+    border: 1px solid #b6b6b6;
+    height: 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px #b3b3b3 inset;
+    padding: 0 5px;
+    line-height: 30px;
+    text-align: center;
+}
+.editable .edit,
+.editable .remove {
+    display: none;
+}
+.editable .val {
+    display: none;
+}
+.editable .txedit {
+    display: block;
+    width: 100%;
+}
+.editable .update {
+    display: inline-block;
+}
+.table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+}
+.table th {
+    white-space: nowrap;
+}
+.table tr {
+    border-color: inherit;
+}
+.table tbody {
+    border-color: inherit;
+}
+.table td,
+.table th {
+    border: 1px solid;
+    border-color: inherit;
+    padding: 6px
+}
+.table.rows td,.table.rows th {
+    border-left-width: 0;
+    border-right-width: 0;
+}   
+.table.cols td,.table.cols th {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.inpholder {
+    height: 35px;
+    display: block;
+    position: relative;
+    margin: 0 12px
+}
+.inputtxt,
+.inputbtn {
+    display: inline-block
+}
+.inpholder input[type=text] {
+    height: 100%;
+    border-bottom: 1px solid #00bcd4;
+    width: 100%;
+    padding: 0 6px;
+    background: -webkit-linear-gradient(top, #fff 1px, rgba(0, 172, 193, 0.1));
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+    transition: all .2s ease;
+    color: #000;
+}
+.inpholder input[type=text]:focus {
+    background-position: 0 0;
+}
+.lagend {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    font-size: 15px;
+    transition: all .2s ease;
+    color: #000;
+}
+.inpholder input.focusTxt + .lagend {
+    top: -18px;
+    left: 0;
+}
+.iholder100 {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+}
+.iholder50 {
+    height: 5%;
+    display: inline-block;
+    width: 100%;
+}
+.form {
+    width: 400px;
+    display: inline-block;
+    background-color: #fff;
+}
+.form > .row {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form > .row:last-child {
+    margin-bottom: 12px;
+}
+.cb-header {
+    background-color: #00838f;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 70px;
+    margin-bottom: 30px;
+}
+.cb-header h1 {
+    font-size: 28px;
+    font-weight:300
+}
+.pb-profile {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+}
+.pb-profile img {
+    width: 100%;
+    vertical-align: top;
+}
+.pb-profile:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 18px, rgba(0, 0, 0, 0.28));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0) 18px, rgba(0, 0, 0, 0.28));
+    background: linear-gradient(rgba(0, 0, 0, 0) 18px, rgba(0, 0, 0, 0.28));
+}
+.cmd svg {
+    fill: currentColor;
+    vertical-align: middle;
+    width: 100%;
+}
+.cmd {
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 16px;
+    padding: 5px;
+    cursor: pointer
+}
+.cmd.edit {
+    background-color: #2196F3
+}
+.cmd.update {
+    background-color: #4CAF50
+}
+.cmd.remove {
+    background-color: #F44336
+}
+.cmd.edit:hover {
+    background-color: #1c7ecd;
+}
+.cmd.update:hover {
+    background-color: #39823c;
+}
+.cmd.remove:hover {
+    background-color: #d23a2f;
+}
+.actions {
+    white-space: nowrap
+}
+.Phonebook {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #00838f;
+}
+
+#add {
+    margin-left: 12px;
+    width: 126px;
+    cursor: pointer
+}
