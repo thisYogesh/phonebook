@@ -16,40 +16,18 @@ var html = {
                         "</div>" +
                         "<div class='row inputtxt'>" +
                             "<label class='inpholder'>" +
-                                "<input type='text' id='name' autocomplete='off'>" +
+                                "<input type='text' id='name' class='input' autocomplete='off'>" +
                                 "<span class='lagend'>Name</span>" +
                             "</label>" +
                         "</div>" +
                         "<div class='row inputtxt'>" +
                             "<label class='inpholder'>" +
-                                "<input type='text' id='contact_no' autocomplete='off'>" +
+                                "<input type='text' id='contact_no' class='input' autocomplete='off'>" +
                                 "<span class='lagend'>Contact no</span>" +
                             "</label>" +
                         "</div>" +
                         "<div class='row inputbtn'>" +
-                            "<input id='add' type='button' value='Add Contact'/>" +
-                        "</div>" +
-                    "</div>",
-    form :  "<div class='Phonebook form'>" +
-                        "<div class='row inputtxt'>" +
-                            "<div class='cb-header'>" +
-                                "<h1><span class='pb-profile'><img src='img/profile.jpg'></span>Yogesh's Phonebook</h1>" +
-                            "</div>" +
-                        "</div>" +
-                        "<div class='row inputtxt'>" +
-                            "<label class='inpholder'>" +
-                                "<input type='text' id='name' autocomplete='off'>" +
-                                "<span class='lagend'>Name</span>" +
-                            "</label>" +
-                        "</div>" +
-                        "<div class='row inputtxt'>" +
-                            "<label class='inpholder'>" +
-                                "<input type='text' id='contact_no' autocomplete='off'>" +
-                                "<span class='lagend'>Contact no</span>" +
-                            "</label>" +
-                        "</div>" +
-                        "<div class='row inputbtn'>" +
-                            "<input id='add' type='button' value='Add Contact'/>" +
+                            "<button id='add' class='button'><i class='fa fa-plus'></i>Add Contact</button>" +
                         "</div>" +
                     "</div>",
     contactBookView:{
@@ -102,17 +80,19 @@ phoneBook.ext({
     controller: function () {
         var _this = this;
         this.view.find("#add").click(function () {
-            if (_this.contactBook.contacts.length == 0) {
-                _this.contactBook.bookView();
-            }
             var data = {
                 name: _this.view.find("#name").val(),
                 contact: _this.view.find("#contact_no").val()
             }
-            _this.contactBook.addContact(data.name, data.contact);
-            _this.view.find("#name,#contact_no").val("").blur();
+            if(data.name && data.contact){
+                if (_this.contactBook.contacts.length == 0) {
+                    _this.contactBook.bookView();
+                }
+                _this.contactBook.addContact(data.name, data.contact);
+                _this.view.find(".input").val("").blur();
+            }
         });
-        this.view.find(".inputtxt input").focus(function () {
+        this.view.find(".inputtxt .input").focus(function () {
             $(this).addClass("focusTxt");
         }).blur(function () {
             if (this.value == "") $(this).removeClass("focusTxt");
@@ -156,10 +136,9 @@ contact.ext({
         this.putVal();
     },
     putVal: function (forupdate) {
-        if (!forupdate) this.view.find(".srno").html(this.contactBook.contacts.length);
+        this.view.find(".srno").html(this.srno);
         this.view.find(".cname .val").html(this.name);
         this.view.find(".cname .txedit").val(this.name);
-
         this.view.find(".cnum .val").html(this.contact_no);
         this.view.find(".cnum .txedit").val(this.contact_no);
     },
@@ -181,9 +160,10 @@ contact.ext({
     },
     add: function (name, contact_no) {
         this.name = name;
-        this.contact_no = contact_no;
+        this.contact_no = contact_no;  
         if (this.validate()) {
             this.contactBook.contacts.push(this);
+            this.srno = this.contactBook.contacts.length;
             this.contactView();
         }
     },
@@ -196,7 +176,7 @@ contact.ext({
         }
     },
     edit: function () {
-        this.view.addClass("editable");
+        this.view.addClass("editable").find(".cname .txedit").focus().select();
     },
     remove: function () {
         this.view.remove();
@@ -208,12 +188,15 @@ contact.ext({
             }
         }
     },
-    
     validate: function () {
-        if (this.name != "" && this.contact_no != "") {
-            return true;
-        } else {
-            return false;
+        if (this.name != "" && this.contact_no != "") return true;
+        else return false;
+    },
+    resetSrNo: function(i){
+        var contacts = this.contactBook.contacts;
+        for(var i=i; i<contacts.length;i++){
+            contacts[i].view.find(".srno").html(contacts[i].srno -= 1);
         }
+        
     }
 });
