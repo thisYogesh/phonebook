@@ -5,7 +5,7 @@ Function.prototype.ext = function (Obj) {
     }
 }
 Function.prototype.inherit = function (parentFun) {
-    this.prototype = parentFun.prototype;
+    this.prototype = Object.create(parentFun.prototype);
 }
 var html = {
     phonebookView : "<div class='Phonebook form'>" +
