@@ -1,0 +1,17 @@
+* {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fafafa
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}

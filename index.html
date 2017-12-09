@@ -1,19 +1,35 @@
 <!doctype html>
 <html>
-    <head>
-            <link rel="stylesheet" href="css/style.css"/>
-            <link rel="stylesheet" href="css/font-awesome.min.css"/>
-            <script src="js/jquery.js" type="text/javascript"></script>
-            <script src="js/app.js" type="text/javascript"></script>
-            <script>
-                function init(){
-                    var app = new phoneBook(".c1");
-                    window.app = app;
-                }
-            </script>
-    </head>
-    <body onload="init()">
-        <div class="contackbook c1"></div>
-        <div class="contackbook c2"></div>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/templates.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script>
+        function init() {
+            var app = new phoneBook(".c1");
+            window.app = app;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <header class="header">
+        <div class="container">
+            <span class="pb-profile">
+                <img src="img/profile.jpg"/>
+                <span class="app-title">Yogesh's Contacts</span>
+            </span>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="contackbook c1"></div>
+        </div>
+    </section>
+</body>
+
 </html>
