@@ -105,9 +105,8 @@ input.txedit {
     height: 35px;
     display: block;
     position: relative;
-    margin: 0 15px
 }
-.inputtxt,
+.input-field,
 .inputbtn {
     display: inline-block
 }
@@ -154,7 +153,7 @@ input.txedit {
 .form {
     width: 400px;
     display: inline-block;
-    background-color: #e8f9fb;
+    /*background-color: #e8f9fb;*/
 }
 .form > .row {
     width: 100%;
@@ -277,4 +276,12 @@ input.txedit {
     font-size: 1.5em;
     font-weight: lighter;
     vertical-align: middle;
+}
+
+.form > .row .gWrap {
+    padding: 0 15px;
+}
+
+.form > .row .gWrap> .g2 {
+    padding-right: 10px;
 }

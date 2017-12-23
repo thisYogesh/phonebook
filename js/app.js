@@ -35,7 +35,7 @@ phoneBook.ext({
                 _this.view.find(".input").val("").blur();
             }
         });
-        this.view.find(".inputtxt .input").focus(function () {
+        this.view.find(".input-field .input").focus(function () {
             $(this).addClass("focusTxt");
         }).blur(function () {
             if (this.value == "") $(this).removeClass("focusTxt");

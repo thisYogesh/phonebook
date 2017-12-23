@@ -5,18 +5,8 @@ var html = {
                                 "<i class='fa fa-plus-circle'></i> Add New Contact" +
                             "</h1>" +
                         "</div>" +
-                        "<div class='row inputtxt'>" +
-                            "<label class='inpholder'>" +
-                                "<input type='text' id='name' class='input' autocomplete='off'>" +
-                                "<span class='lagend'>Name</span>" +
-                            "</label>" +
-                        "</div>" +
-                        "<div class='row inputtxt'>" +
-                            "<label class='inpholder'>" +
-                                "<input type='text' id='contact_no' class='input' autocomplete='off'>" +
-                                "<span class='lagend'>Contact no</span>" +
-                            "</label>" +
-                        "</div>" +
+                        '<div class="row input-field"><div class="gWrap clearfix"><label class="inpholder"><input type="text" id="name" class="input" autocomplete="off"><span class="lagend">Name</span></label></div></div>' +
+                        '<div class="row input-field"><div class="gWrap clearfix"><div class="g2 fl"><label class="inpholder"><input type="text" id="contact_no" class="input" autocomplete="off"><span class="lagend">Code</span></label></div><div class="g10 fl"><label class="inpholder"><input type="text" id="contact_no" class="input" autocomplete="off"><span class="lagend">Contact no</span></label></div></div></div>' +
                         "<div class='row inputbtn'>" +
                             "<button id='add' class='button'>Add Contact</button>" +
                         "</div>" +
