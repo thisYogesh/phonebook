@@ -1,13 +1,79 @@
 var html = {
-    phonebookView : "<div class='Phonebook form'>" +
+    phonebookView : "<div class='pb-form form'>" +
                         "<div class='cb-header'>" +
                             "<h1>" +
                                 "<i class='fa fa-plus-circle'></i> Add New Contact" +
                             "</h1>" +
                         "</div>" +
-                        '<div class="row input-field"><div class="gWrap clearfix"><label class="inpholder"><input type="text" id="name" class="input" autocomplete="off"><span class="lagend">Name</span></label></div></div>' +
-                        '<div class="row input-field"><div class="gWrap clearfix"><div class="g2 fl"><label class="inpholder"><input type="text" id="contact_no" class="input" autocomplete="off"><span class="lagend">Code</span></label></div><div class="g10 fl"><label class="inpholder"><input type="text" id="contact_no" class="input" autocomplete="off"><span class="lagend">Contact no</span></label></div></div></div>' +
-                        "<div class='row inputbtn'>" +
+                        "<section class='group-wrap'>" +
+                            "<div class='set-group clearfix'>" +
+                                "<label class='group-lbl'>Summery Information</label>" +
+                                "<div class='row-wrap'>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='name' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Name</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<div class='g2 fl'>" +
+                                                "<label class='inpholder'>" +
+                                                    "<input type='text' id='contact_no' class='input' autocomplete='off'>" +
+                                                    "<span class='lagend'>Code</span>" +
+                                                "</label>" +
+                                            "</div>" +
+                                            "<div class='g10 fl'>" +
+                                                "<label class='inpholder'>" +
+                                                    "<input type='text' id='contact_no' class='input' autocomplete='off'>" +
+                                                    "<span class='lagend'>Contact no</span>" +
+                                                "</label>" +
+                                            "</div>" +
+                                        "</div>" +
+                                    "</div>" +
+                                "</div>" +
+                            "</div>" +
+                            "<div class='set-group clearfix'>" +
+                                "<label class='group-lbl'>Work Information</label>" +
+                                "<div class='row-wrap'>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='cn' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Company Name</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='jt' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Job title</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='w-mb' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Mobile</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='w-site' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Website</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                "</div>" +
+                            "</div>" +
+                        "</section>" +
+                        "<div class='inputbtn'>" +
                             "<button id='add' class='button'>Add Contact</button>" +
                         "</div>" +
                     "</div>",
