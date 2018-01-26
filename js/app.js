@@ -45,6 +45,11 @@ phoneBook.ext({
             var key = String.fromCharCode(e.charCode);
             return !isNaN(key);
         });
+        
+        //.attach-fixed
+        $(window).scroll(function(){
+
+        });
     }
 });
 

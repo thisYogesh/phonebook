@@ -28,7 +28,7 @@ var html = {
                                             "<div class='g10 fl'>" +
                                                 "<label class='inpholder'>" +
                                                     "<input type='text' id='contact_no' class='input' autocomplete='off'>" +
-                                                    "<span class='lagend'>Contact no</span>" +
+                                                    "<span class='lagend'>Mobile no</span>" +
                                                 "</label>" +
                                             "</div>" +
                                         "</div>" +
@@ -72,9 +72,34 @@ var html = {
                                     "</div>" +
                                 "</div>" +
                             "</div>" +
+                            "<div class='set-group clearfix'>" +
+                                "<label class='group-lbl'>Home Information</label>" +
+                                "<div class='row-wrap'>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='hmobile' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Mobile No</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                    "<div class='row input-field'>" +
+                                        "<div class='gWrap clearfix'>" +
+                                            "<label class='inpholder'>" +
+                                                "<input type='text' id='jt' class='input' autocomplete='off'>" +
+                                                "<span class='lagend'>Job title</span>" +
+                                            "</label>" +
+                                        "</div>" +
+                                    "</div>" +
+                                "</div>" +
+                            "</div>" +
                         "</section>" +
-                        "<div class='inputbtn'>" +
-                            "<button id='add' class='button'>Add Contact</button>" +
+                        "<div class='button-placeholder'>" +
+                            "<div class='inputbtn_wrap'>" +
+                                "<div class='inputbtn'>" +
+                                    "<button id='add' class='button'>Add Contact</button>" +
+                                "</div>" +
+                            "</div>" +
                         "</div>" +
                     "</div>",
     contactBookView:{

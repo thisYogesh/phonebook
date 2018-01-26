@@ -22,7 +22,7 @@
 
 
 .contackbook {
-    padding: 15px 0;
+    padding: 50px 0;
 }
 .alignCenter {
     text-align: center
@@ -109,7 +109,7 @@ input.txedit {
 .input-field {
     display: inline-block
 }
-.inputbtn{}
+.inputbtn{padding-bottom: 10px;padding-top: 10px;}
 .inpholder .input {
     height: 100%;
     border-bottom: 1px solid #00bcd4;
@@ -151,7 +151,7 @@ input.txedit {
 .pb-form {
     width: 400px;
     display: inline-block;
-    /*background-color: #e8f9fb;*/
+    background-color: #fff;
 }
 .set-group .group-lbl {
     margin-left: 15px;
@@ -265,8 +265,6 @@ input.txedit {
 }
 .pb-form {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-    border-bottom: 3px solid #00838f;
-    padding-bottom: 10px;
 }
 
 #add {
@@ -300,4 +298,35 @@ input.txedit {
     font-size: 1.5em;
     font-weight: lighter;
     vertical-align: middle;
+}
+
+.button-placeholder {
+    position: relative;
+    height: 65px;
+}
+
+.inputbtn_wrap {
+    border-bottom: 3px solid #00838f;
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    height: 100%;
+}
+
+.inputbtn_wrap.attach-fixed {
+    height: auto;
+    position: fixed;
+    background-color: #fff;
+    bottom: 50px;
+    box-shadow: 0px -3px 3px rgba(130, 130, 130, 0.25);
+}
+
+.inputbtn_wrap.attach-fixed:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 50px);
+    height: 50px;
+    bottom: -53px;
+    background: white;
+    left: -25px;
 }
