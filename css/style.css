@@ -20,7 +20,9 @@
 }
 
 
-
+.fa.ico {
+    font-size: inherit;
+}
 .contackbook {
     padding: 50px 0;
 }
@@ -308,7 +310,7 @@ input.txedit {
 .inputbtn_wrap {
     border-bottom: 3px solid #00838f;
     position: absolute;
-    width: 400px;
+    width: 100%;
     bottom: 0;
     height: 100%;
 }
@@ -327,6 +329,6 @@ input.txedit {
     width: calc(100% + 50px);
     height: 50px;
     bottom: -53px;
-    background: white;
+    background: #fafafa;
     left: -25px;
 }

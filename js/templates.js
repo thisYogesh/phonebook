@@ -1,8 +1,8 @@
 var html = {
-    phonebookView : "<div class='pb-form form'>" +
+    phonebookView : "<div class='pb-form form g5'>" +
                         "<div class='cb-header'>" +
                             "<h1>" +
-                                "<i class='fa fa-plus-circle'></i> Add New Contact" +
+                                "<i class='fa fa-plus-circle ico'></i> Add New Contact" +
                             "</h1>" +
                         "</div>" +
                         "<section class='group-wrap'>" +

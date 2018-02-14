@@ -1,7 +1,7 @@
 var http = require('http');
 
 http.createServer(function (request, response) {
-    response.setHeader("Content-Type", "text/plain");
+    //response.setHeader("Content-Type", "text/plain");
     /*if (request.url != '/?yogesh') {
         response.writeHead(301, {
             location: "?yogesh"

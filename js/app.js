@@ -27,7 +27,7 @@ phoneBook.ext({
                 name: _this.view.find("#name").val(),
                 contact: _this.view.find("#contact_no").val()
             }
-            if(data.name && data.contact){
+            if (data.name && data.contact) {
                 if (_this.contactBook.contacts.length == 0) {
                     _this.contactBook.bookView();
                 }
@@ -45,11 +45,24 @@ phoneBook.ext({
             var key = String.fromCharCode(e.charCode);
             return !isNaN(key);
         });
-        
-        //.attach-fixed
-        $(window).scroll(function(){
 
-        });
+        //.attach-fixed
+        var _this = this,
+            fixedBottom = false,
+            scrollFix = function () {
+                var ST = window.pageYOffset,
+                    form = _this.view;
+
+                if ((form.offset().top + form.outerHeight() - ST <= window.innerHeight - 50) && fixedBottom) {
+                    form.find('.inputbtn_wrap').removeClass("attach-fixed").css('width','100%');
+                    fixedBottom = false;
+                } else if ((form.offset().top + form.outerHeight() - ST > window.innerHeight - 50) && !fixedBottom) {
+                    form.find('.inputbtn_wrap').addClass("attach-fixed").css('width', form.find('.inputbtn_wrap').parent().outerWidth());
+                    fixedBottom = true;
+                }
+            };
+        $(window).scroll(scrollFix);
+        scrollFix();
     }
 });
 
@@ -108,7 +121,7 @@ contact.ext({
     },
     add: function (name, contact_no) {
         this.name = name;
-        this.contact_no = contact_no;  
+        this.contact_no = contact_no;
         if (this.validate()) {
             this.contactBook.contacts.push(this);
             this.srno = this.contactBook.contacts.length;
@@ -140,11 +153,10 @@ contact.ext({
         if (this.name != "" && this.contact_no != "") return true;
         else return false;
     },
-    resetSrNo: function(i){
+    resetSrNo: function (i) {
         var contacts = this.contactBook.contacts;
-        for(var i=i; i<contacts.length;i++){
+        for (var i = i; i < contacts.length; i++) {
             contacts[i].view.find(".srno").html(contacts[i].srno -= 1);
         }
-        
     }
 });

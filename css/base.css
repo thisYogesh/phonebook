@@ -72,14 +72,17 @@ body {
     width: 8.333333333333332%;
 }
 
-.gWrap{
-
-}
-
 .txr{
     text-align: right;
 }
 
 .txl{
     text-align: left;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
 }
